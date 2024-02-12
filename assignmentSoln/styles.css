@@ -1,0 +1,22 @@
+.displayInput {
+  margin: 15px;
+  border: 1px solid rgb(112, 108, 108);
+  padding: 20px;
+  background-color: white;
+}
+.displayOutput {
+  margin: 15px;
+  border: 1px solid rgb(112, 108, 108);
+  padding: 20px;
+  background-color: white;
+}
+
+.buttonBox {
+  margin: 15px;
+  border: 1px solid rgb(112, 108, 108);
+}
+
+.numberButton {
+  height: 20px;
+  width: 20px;
+}
