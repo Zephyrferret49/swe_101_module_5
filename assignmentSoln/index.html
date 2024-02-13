@@ -11,44 +11,56 @@
     <div>
       <!-- this div for entire calculator; contain input, output, and buttons -->
 
-      <div class="displayInput">
-        <!-- this div is for input -->
-      </div>
+      <div class="displayInput"><!-- this div is for input -->1</div>
       <div class="displayOutput">
         <!-- this div is for output -->
       </div>
       <div class="buttonBox">
         <!-- this div is for 16 buttons 0-9,+-*/=, backspace -->
-        <div class="row1">
+        <div class="row">
           <!-- 123+ -->
           <button type="button" class="numberButton" id="button1">1</button>
           <button type="button" class="numberButton" id="button2">2</button>
           <button type="button" class="numberButton" id="button3">3</button>
-          <button type="button" class="numberButton" id="buttonPlus">+</button>
+          <button type="button" class="functionButton" id="buttonPlus">
+            +
+          </button>
         </div>
-        <div class="row2">
+        <div class="row">
           <!-- 456- -->
           <button type="button" class="numberButton" id="button4">4</button>
           <button type="button" class="numberButton" id="button5">5</button>
           <button type="button" class="numberButton" id="button6">6</button>
-          <button type="button" class="numberButton" id="buttonMinus">-</button>
+          <button type="button" class="functionButton" id="buttonMinus">
+            -
+          </button>
         </div>
-        <div class="row3">
+        <div class="row">
           <!-- 789* -->
           <button type="button" class="numberButton" id="button7">7</button>
           <button type="button" class="numberButton" id="button8">8</button>
           <button type="button" class="numberButton" id="button9">9</button>
-          <button type="button" class="numberButton" id="buttonTimes">X</button>
+          <button type="button" class="functionButton" id="buttonTimes">
+            X
+          </button>
         </div>
-        <div class="row4">
+        <div class="row">
           <!-- =0backspace/ -->
-          <button type="button" class="numberButton" id="buttonEqual">=</button>
+          <button type="button" class="functionButton" id="buttonEqual">
+            =
+          </button>
           <button type="button" class="numberButton" id="button0">0</button>
-          <button type="button" class="numberButton" id="buttonBackspace">
+          <button type="button" class="functionButton" id="buttonBackspace">
             <
           </button>
-          <button type="button" class="numberButton" id="buttonDivide">
+          <button type="button" class="functionButton" id="buttonDivide">
             /
+          </button>
+        </div>
+        <div class="row5">
+          <!-- =0backspace/ -->
+          <button type="button" class="resetButton" id="buttonEqual">
+            Reset
           </button>
         </div>
       </div>
