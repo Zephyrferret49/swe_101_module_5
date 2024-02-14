@@ -1,5 +1,6 @@
 // Get all the number buttons
 let numberButtons = document.querySelectorAll(".numberButton");
+let functionButtons = document.querySelectorAll(".functionButton");
 // this section deals with displaying the value in displayInput
 let displayInput = document.querySelector(".displayInput");
 let inputDisplayValue = [];
@@ -11,6 +12,17 @@ function concatenateDisplayInputs() {
   displayInput.textContent = concatenatedDisplayValue;
 }
 numberButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Get the content of the button
+    const buttonContent = button.textContent;
+    inputDisplayValue.push(buttonContent);
+    //runs a function that prints the called number concatenated and refreshes displayOutput
+    concatenateDisplayInputs();
+    //runs a function that stores actual value
+  });
+});
+
+functionButtons.forEach((button) => {
   button.addEventListener("click", () => {
     // Get the content of the button
     const buttonContent = button.textContent;

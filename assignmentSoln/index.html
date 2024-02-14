@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="calculator.js"></script>
+    <script src="calculator.js" defer></script>
     <div>
       <!-- this div for entire calculator; contain input, output, and buttons -->
 
@@ -46,11 +46,9 @@
         </div>
         <div class="row">
           <!-- =0backspace/ -->
-          <button type="button" class="functionButton" id="buttonEqual">
-            =
-          </button>
+          <button type="button" class="equalButton" id="buttonEqual">=</button>
           <button type="button" class="numberButton" id="button0">0</button>
-          <button type="button" class="functionButton" id="buttonBackspace">
+          <button type="button" class="backspaceButton" id="buttonBackspace">
             <
           </button>
           <button type="button" class="functionButton" id="buttonDivide">
@@ -59,7 +57,7 @@
         </div>
         <div class="row5">
           <!-- =0backspace/ -->
-          <button type="button" class="resetButton" id="buttonEqual">
+          <button type="button" class="resetButton" id="buttonReset">
             Reset
           </button>
         </div>

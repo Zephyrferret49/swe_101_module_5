@@ -31,7 +31,9 @@ body {
   width: 20%;
 }
 
-.functionButton {
+.functionButton,
+.equalButton,
+.backspaceButton {
   height: 20%;
   width: 20%;
 }
