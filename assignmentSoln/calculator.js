@@ -1,25 +1,41 @@
 // Get all the number buttons
-const numberButtons = document.querySelectorAll(".numberButton");
+let numberButtons = document.querySelectorAll(".numberButton");
+// this section deals with displaying the value in displayInput
+let displayInput = document.querySelector(".displayInput");
+let inputDisplayValue = [];
 
 // Add event listeners to each number button
+
+function concatenateDisplayInputs() {
+  let concatenatedDisplayValue = inputDisplayValue.join("");
+  displayInput.textContent = concatenatedDisplayValue;
+}
 numberButtons.forEach((button) => {
   button.addEventListener("click", () => {
     // Get the content of the button
     const buttonContent = button.textContent;
+    inputDisplayValue.push(buttonContent);
+    //runs a function that prints the called number concatenated and refreshes displayOutput
+    concatenateDisplayInputs();
+    //runs a function that stores actual value
   });
 });
 
-let inputValues = [];
+// this section onwards deals with calculating the actual value
+let inputActualValues = [];
 
-// this part still needs editing
-function addInputValue(value) {
-  inputValues.push(value);
+// creates a function that does the following:
+//joins the inputs in inputActualValues into a string as concatenatedActualValue,
+// converts it to an integer, pushes it into the array, clears numberValue
+function concatenateStoredInputs() {
+  let concatenatedActualValue = inputActualValues.join("");
+  let numberValue = parseInt(concatenatedActualValue, 10); // Convert string to integer
+  inputActualValues.push(numberValue);
+  numberValue = null;
 }
+//when a functionbutton is pressed, run the above function
+functionButton.forEach((button) => {
+  button.addEventListener("click", concatenateStoredInputs);
+});
 
-function removeInputValue(index) {
-  inputValues.splice(index, 1);
-}
-
-function updateInputValue(index, newValue) {
-  inputValues[index] = newValue;
-}
+//this section governs the arithmethic when equal is pressed.
