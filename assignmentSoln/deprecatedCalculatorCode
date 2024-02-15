@@ -1,0 +1,48 @@
+// these code are deprecated because this method doesnt let you remove the old numbers.
+
+function concatenateDisplayInputs() {
+  let concatenatedDisplayValue = inputDisplayValue.join("");
+  displayInput.textContent = concatenatedDisplayValue;
+}
+numberButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Get the content of the button
+    const buttonContent = button.textContent;
+    inputDisplayValue.push(buttonContent);
+    //runs a function that prints the called number concatenated and refreshes displayOutput
+    concatenateDisplayInputs();
+    //runs a function that stores actual value
+  });
+});
+
+// creates a function that does the following:
+//joins the inputs in inputActualValues into a string as concatenatedActualValue,
+// converts it to an integer, pushes it into the array, clears numberValue
+function concatenateStoredInputs() {
+  let concatenatedActualValue = inputActualValues.join("");
+  let numberValue = parseInt(concatenatedActualValue, 10); // Convert string to integer
+  inputActualValues.push(numberValue);
+  numberValue = null;
+}
+//when a functionbutton is pressed, run the above function
+functionButton.forEach((button) => {
+  button.addEventListener("click", concatenateStoredInputs);
+});
+
+//this section governs the arithmethic when equal is pressed.
+
+functionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Get the content of the button
+    const buttonContent = button.textContent;
+    inputDisplayValue.push(buttonContent);
+    //runs a function that prints the called number concatenated and refreshes displayOutput
+    concatenateDisplayInputs();
+    //runs a function that stores actual value
+  });
+});
+
+function storingDisplayValue() {
+  inputActualValues.push(numberValue);
+  numberValue = null;
+}
